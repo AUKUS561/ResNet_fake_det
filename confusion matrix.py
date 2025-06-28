@@ -55,37 +55,6 @@ class ConfusionMatrix(object):
             table.add_row([self.labels[i], Precision, Recall, Specificity, F_1])
         print(table)
 
-    # def plot(self):
-    #     matrix = self.matrix
-    #     print(matrix)
-    #
-    #     # 规范化混淆矩阵的值，确保在0到1之间
-    #     normalized_matrix = matrix / matrix.sum(axis=1, keepdims=True)
-    #
-    #     plt.imshow(normalized_matrix, cmap='Greens', norm=mcolors.Normalize(vmin=0, vmax=1))
-    #
-    #     # 设置x轴坐标label
-    #     plt.xticks(range(self.num_classes), self.labels, rotation=45)
-    #     # 设置y轴坐标label
-    #     plt.yticks(range(self.num_classes), self.labels)
-    #     # 显示colorbar
-    #     plt.colorbar()
-    #     plt.ylabel('True Labels')
-    #     plt.xlabel('Predicted Labels')
-    #     plt.title('Confusion Matrix')
-    #
-    #     # 在图中标注原始的计数值
-    #     for x in range(self.num_classes):
-    #         for y in range(self.num_classes):
-    #             cell_value = matrix[y, x]
-    #             normalized_value = normalized_matrix[y, x]
-    #             plt.text(x, y, cell_value,
-    #                      verticalalignment='center',
-    #                      horizontalalignment='center',
-    #                      color="white" if normalized_value > 0.5 else "black")
-    #     plt.tight_layout()
-    #     plt.show()
-
     def plot(self):
         matrix = self.matrix
         print(matrix)
